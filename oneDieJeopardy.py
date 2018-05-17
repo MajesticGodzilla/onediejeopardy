@@ -3,30 +3,32 @@
 #April 28, 2018
 #
 
+
 import random
 import time
 
 
 def welcome():
 
+    print("Dad Was Here")
 
     print(" __        __   _                            _        ")
     print(" \ \      / /__| | ___ ___  _ __ ___   ___  | |_ ___  ")
     print("  \ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \ | __/ _ \ ")
     print("   \ V  V /  __/ | (_| (_) | | | | | |  __/ | || (_) |")
     print("    \_/\_/ \___|_|\___\___/|_| |_| |_|\___|  \__\___/ ")
-                                                          
 
-            
-            
+
+
+
     print("    [....                             [.....                           [..                                                  [..         ")
     print(" [..    [..                          [..   [..  [.                    [..                                                  [..          ")
     print("[..        [..[.. [..     [..         [..    [..      [..              [..   [..       [..    [. [..     [..    [. [...     [..[..   [..")
     print("[..        [.. [..  [.. [.   [..      [..    [..[.. [.   [..           [.. [.   [..  [..  [.. [.  [..  [..  [..  [..    [.. [.. [.. [.. ")
-    print("[..        [.. [..  [..[..... [..     [..    [..[..[..... [..          [..[..... [..[..    [..[.   [..[..   [..  [..   [.   [..   [...  ")  
+    print("[..        [.. [..  [..[..... [..     [..    [..[..[..... [..          [..[..... [..[..    [..[.   [..[..   [..  [..   [.   [..   [...  ")
     print("  [..     [..  [..  [..[.             [..   [.. [..[.             [.   [..[.         [..  [.. [.. [.. [..   [..  [..   [.   [..    [..  ")
-    print("    [....     [...  [..  [....        [.....    [..  [....         [....    [....      [..    [..       [.. [...[...    [.. [..   [..   ") 
-    print("                                                                                              [..                               [..     ") 
+    print("    [....     [...  [..  [....        [.....    [..  [....         [....    [....      [..    [..       [.. [...[...    [.. [..   [..   ")
+    print("                                                                                              [..                               [..     ")
     print()
     print()
     print("Here is how the game works.\n")
@@ -34,9 +36,9 @@ def welcome():
     print("You are player 1. You will be rolling first.\n")
     time.sleep(1)
     print("                                                  ___                                                       ")
-    print("At the begining of your turn you will roll a die | ● | it's face value will then be added to your turn score.")  
+    print("At the begining of your turn you will roll a die | ● | it's face value will then be added to your turn score.")
     print("                                                 |_●_|                                                      ")
-    print("                                                                                                            ") 
+    print("                                                                                                            ")
     time.sleep(1)
     print("During your turn\n")
     print("You will have the option to roll as many times as you wish in order to increase your turn score")
@@ -45,7 +47,7 @@ def welcome():
     time.sleep(1)
     print("                            ___                                                                                 ")
     print("However, If you roll a one | ● |  at any point during your turn your score will be reset and your turn will end.")
-    print("                           |___|                                                                            ")                    
+    print("                           |___|                                                                            ")
     print()
     time.sleep(2)
     print("Your misssion, if you chose to accept it, is to reach a total game score of |100| before the computer can.")
@@ -56,15 +58,15 @@ def welcome():
     print("(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧Good Luck ✧ﾟ･: *ヽ(◕ヮ◕ヽ)")
     time.sleep(2)
     print()
-    
+
 
 
 
 def roll():
     faceValue=random.randint(1,6)
     return faceValue
-                
-                    
+
+
 def playerTurn(player,computer_points):
     faceValue=roll()
     totalPoints=0
@@ -74,11 +76,11 @@ def playerTurn(player,computer_points):
             totalPoints=0
             print("Rolling the die (ﾉ◕ヮ◕)ﾉ*:･ﾟ                  ")
             print("                             _______         ")
-            print("                            /\       \       ")     
-            print("                           /()\   ()  \      ")    
-            print("                          /    \_______\     ")    
-            print("                          \    /()     /     ")   
-            print("                           \()/   ()  /      ")   
+            print("                            /\       \       ")
+            print("                           /()\   ()  \      ")
+            print("                          /    \_______\     ")
+            print("                          \    /()     /     ")
+            print("                           \()/   ()  /      ")
             print("                            \/_____()/       ")
             print("                                             ")
             time.sleep(2)
@@ -102,11 +104,11 @@ def playerTurn(player,computer_points):
             print()
             print("Rolling the die (ﾉ◕ヮ◕)ﾉ*:･ﾟ                  ")
             print("                             _______         ")
-            print("                            /\       \       ")     
-            print("                           /()\   ()  \      ")    
-            print("                          /    \_______\     ")    
-            print("                          \    /()     /     ")   
-            print("                           \()/   ()  /      ")   
+            print("                            /\       \       ")
+            print("                           /()\   ()  \      ")
+            print("                          /    \_______\     ")
+            print("                          \    /()     /     ")
+            print("                           \()/   ()  /      ")
             print("                            \/_____()/       ")
             print("                                              ")
             time.sleep(2)
@@ -114,25 +116,25 @@ def playerTurn(player,computer_points):
             time.sleep(1)
             print("                                    ╔══╗             ")
             print("Your current total for this turn is ",totalPoints,"  ~(˘▾˘~)")
-            print("                                    ╚══╝             ") 
+            print("                                    ╚══╝             ")
             if winner(player_points,computer_points):
                 break
             time.sleep(1)
             Roll=input("Would you like to roll again? (Y/N) : ")
         if Roll== "Y" in Roll or Roll == "y":
             faceValue=roll()
-        
-        else: 
+
+        else:
             keepGoing=False
             print("You have decided to end your turn.\n")
             print("Your current turn total will be added to your gamescore\n")
-           
-             
 
-                
-           
-        
-        
+
+
+
+
+
+
     return totalPoints
 
 def computerTurn(player_points,computer):
@@ -146,15 +148,15 @@ def computerTurn(player_points,computer):
             comTotalPoints=0
             print("Rolling the die (ﾉ◕ヮ◕)ﾉ*:･ﾟ                  ")
             print("                             _______         ")
-            print("                            /\       \       ")     
-            print("                           /()\   ()  \      ")    
-            print("                          /    \_______\     ")    
-            print("                          \    /()     /     ")   
-            print("                           \()/   ()  /      ")   
+            print("                            /\       \       ")
+            print("                           /()\   ()  \      ")
+            print("                          /    \_______\     ")
+            print("                          \    /()     /     ")
+            print("                           \()/   ()  /      ")
             print("                            \/_____()/       ")
             print("                                             ")
             time.sleep(2)
-        
+
             print("   ___   ")
             print("  | ● |  ")
             print("  |___|  ")
@@ -164,14 +166,14 @@ def computerTurn(player_points,computer):
             keepGoing=False
             break
         else:
-           
+
             print("Rolling the die (ﾉ◕ヮ◕)ﾉ*:･ﾟ                  ")
             print("                             _______         ")
-            print("                            /\       \       ")     
-            print("                           /()\   ()  \      ")    
-            print("                          /    \_______\     ")    
-            print("                          \    /()     /     ")   
-            print("                           \()/   ()  /      ")   
+            print("                            /\       \       ")
+            print("                           /()\   ()  \      ")
+            print("                          /    \_______\     ")
+            print("                          \    /()     /     ")
+            print("                           \()/   ()  /      ")
             print("                            \/_____()/       ")
             print("                                             ")
             time.sleep(2)
@@ -185,16 +187,16 @@ def computerTurn(player_points,computer):
             if winner(player_points,computer_points):
                 break
             computerT=random.randint(1,75)
-            
+
             if computerT<30:
                 keepGoing=False
                 time.sleep(2)
                 print("Computer has chosen to end its turn\n")
                 print("It's current turn total will be added to it's gamescore.\n")
 
-            
-    return comTotalPoints   
-    
+
+    return comTotalPoints
+
 def winner(player,computer):
     winner=False
     if player >=100:
@@ -272,12 +274,12 @@ def main():
         time.sleep(2)
         print("It is player's turn\n")
 
-        
 
-   
-    
-            
-            
+
+
+
+
+
 ########main code########
 
 welcome()
@@ -290,8 +292,8 @@ while keepGoing:
         time.sleep(1)
         print("May the schwartz be with you")
         print("Live long and prosper")
-    
+
         keepGoing=False
 
 
-    
+
